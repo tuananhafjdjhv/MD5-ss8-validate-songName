@@ -14,15 +14,15 @@ public class Song {
     private Long id;
     @NotBlank
     @Length(min = 2, max = 800)
-    @Pattern(regexp = "^[a-zA-Z]*$")
+    @Pattern(regexp = "^[a-zA-Z]*$",message = "không đúng định dạng")
     private String name;
     @NotBlank
     @Length(min = 2, max = 300)
-//    @Pattern(regexp = ".*[^a-zA-Z].*")
+    @Pattern(regexp = "^[a-zA-Z]*",message = "không đúng định dạng")
     private String singer;
     @NotBlank
     @Length(min = 2 ,max = 1000)
-    @Pattern(regexp = "^[a-zA-Z0-9,]*$")
+    @Pattern(regexp = "^[a-zA-Z,]*$",message = "không đúng định dạng")
     private String category;
 
     public Song() {

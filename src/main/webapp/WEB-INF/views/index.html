@@ -25,5 +25,10 @@
   </tr>
   </tbody>
 </table>
+<div>
+  <a th:href="@{'/home'(page=${list.number -1})}" th:if="${list.hasPrevious()}">Back</a>
+  <span th:utext="${list.number+1}"></span>/<span th:utext="${list.totalPages}"></span>
+  <a th:href="@{'/home'(page=${list.number+1})}" th:if="${list.hasNext()}">Next</a>
+</div>
 </body>
 </html>

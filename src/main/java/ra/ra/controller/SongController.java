@@ -33,6 +33,7 @@ public class SongController {
         Page<Song> list = songService.findAll(pageable);
        ModelAndView mv = new ModelAndView("index");
        mv.addObject("list",list);
+
         return mv;
     }
 
